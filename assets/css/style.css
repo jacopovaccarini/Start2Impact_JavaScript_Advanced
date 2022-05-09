@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Saira", sans-serif;
+}
+
+html {
+  height: 100%;
+  display: flex;
+  background-image: url("/assets/img/sfondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #222222;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem;
+  width: 50%;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  color: #22b14c;
+}
+
+.title p {
+  margin: 0;
+  margin-bottom: 4rem;
+}
+
+.textbox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.textbox input {
+  font-size: 40px;
+  text-align: center;
+  width: 50%;
+  border: none;
+  background-color: transparent;
+  color: #b5e61d;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  border: 1.5px solid black;
+  border-radius: 20px;
+  padding: 0.5rem;
+  margin-top: 4rem;
+  background-color: #22b14c;
+}
+
+.button:hover {
+  background-color: #b5e61d;
+  cursor: pointer;
+}
+
+.button p {
+  font-size: 50px;
+  padding: 0;
+  margin: auto;
+  text-align: center;
+}
