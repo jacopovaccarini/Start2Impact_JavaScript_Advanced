@@ -23,13 +23,12 @@ body {
   width: 50%;
 }
 
-.principal {
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding: 1rem;
   width: 100%;
 }
 
@@ -42,7 +41,7 @@ body {
 
 .title p {
   margin: 0;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .textbox {
@@ -60,6 +59,23 @@ body {
   color: #b5e61d;
 }
 
+.result {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  width: 100%;
+  border: 1.5px solid #22b14c;
+  border-radius: 20px;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.result p {
+  padding: 0;
+  margin: 0;
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -67,7 +83,7 @@ body {
   border: 1.5px solid black;
   border-radius: 20px;
   padding: 0.5rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   background-color: #22b14c;
 }
 
