@@ -37,14 +37,24 @@ const textbox = document.querySelector('[textbox-city]');
 
 
 //variabile oggetto elenco città
-let city_list = {
-  0: "Milan",
-  1: "Naples",
-  2: "Los Angeles",
-  3: "New York",
-  4: "Las Vegas"
-};
+let city_list = [];
 
+//richiesta dell'elenco città al server
+window.onload = async function() {
+  const response = await fetch("https://api.teleport.org/api/urban_areas/")
+  if (response.ok) {
+    let json = await response.json();
+    for (i = 0; i < json.count; i++) {
+      city_list[i] = json["_links"]["ua:item"][i]["name"];
+    }
+  } else {
+    Swal.fire({ //messaggio avviso elenco città non trovato
+      title: `The city list was not found`,
+      showCancelButton: false,
+      confirmButtonColor: "#ff0000"
+    });
+  };
+};
 
 //richiesta dei valori al server
 async function get(url, city) {
@@ -100,7 +110,7 @@ async function search() {
       textbox.focus();
     });
   } else {
-    let city = textbox.value.replace(/\s+/g, '-').toLowerCase();
+    let city = textbox.value.replace(/\s+/g, '-').replace(',', '').replace('.', '').toLowerCase();
     get(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`, textbox.value);
     textbox.focus();
   }
@@ -125,6 +135,6 @@ textbox.addEventListener("keypress", function(event) {
 //clisk sul pulsante "random"
 div_random.onclick = function() {
   let num = Math.round(Math.random() * (Object.keys(city_list).length - 1)); //pescaggio del numero random
-  textbox.setAttribute("value", city_list[num]); //settaggio della textbox con la città "pescata"
+  textbox.value = city_list[num]; //settaggio della textbox con la città "pescata"
   search();
 }
