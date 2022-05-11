@@ -25,15 +25,25 @@ div_search.innerHTML = "<p>SEARCH</p>";
 div_search.setAttribute("button-search","");
 div_button.append(div_search);
 
-/*let div_random = document.createElement('div');
+let div_random = document.createElement('div');
 div_random.className = "random";
 div_random.innerHTML = "<p>RANDOM</p>";
 div_random.setAttribute("button-random","");
-div_button.append(div_random);*/
+div_button.append(div_random);
 
 
-//variabili oggetti documento
-const textbox = document.querySelector('[textbox-city]')
+//variabile oggetto documento
+const textbox = document.querySelector('[textbox-city]');
+
+
+//variabile oggetto elenco città
+let city_list = {
+  0: "Milan",
+  1: "Naples",
+  2: "Los Angeles",
+  3: "New York",
+  4: "Las Vegas"
+};
 
 
 //richiesta dei valori al server
@@ -78,8 +88,8 @@ async function print(text) {
 }
 
 
-//click sul pulsante "search"
-div_search.onclick = function() {
+//controllo textbox e invio ricerca
+async function search() {
   if ( textbox.value == "" ) {
     textbox.blur();
     Swal.fire({ //messaggio avviso città non inserita
@@ -97,6 +107,12 @@ div_search.onclick = function() {
 }
 
 
+//click sul pulsante "search"
+div_search.onclick = function() {
+  search();
+}
+
+
 //click sul tasto "invio"
 textbox.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -104,3 +120,11 @@ textbox.addEventListener("keypress", function(event) {
     div_search.click();
   }
 });
+
+
+//clisk sul pulsante "random"
+div_random.onclick = function() {
+  let num = Math.round(Math.random() * (Object.keys(city_list).length - 1)); //pescaggio del numero random
+  textbox.setAttribute("value", city_list[num]); //settaggio della textbox con la città "pescata"
+  search();
+}

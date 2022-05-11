@@ -71,7 +71,7 @@ body {
 .search, .random {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 49%;
   border: 1.5px solid black;
   border-radius: 20px;
   padding: 0.5rem;
