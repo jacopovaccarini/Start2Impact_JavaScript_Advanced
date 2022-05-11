@@ -261,3 +261,15 @@ body {
     }
   }
 }
+
+@media (max-width: 400px) {
+  body {
+    width: 95%;
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    width: 100%;
+  }
+}
