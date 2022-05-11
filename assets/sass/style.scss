@@ -67,8 +67,16 @@ body {
 
 .button {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.search, .random {
+  display: flex;
   justify-content: center;
-  width: 60%;
+  width: 100%; //49% quando c'è anche l'altro button
   border: 1.5px solid black;
   border-radius: 20px;
   padding: 0.5rem;
@@ -121,7 +129,7 @@ body {
     }
   }
 
-  .button {
+  .search, .random {
     p {
       font-size: 40px;
     }
@@ -146,7 +154,7 @@ body {
     }
   }
 
-  .button {
+  .search, .random {
     margin-top: 1.5rem;
     p {
       font-size: 35px;
@@ -182,7 +190,7 @@ body {
     }
   }
 
-  .button {
+  .search, .random {
     padding: 0.25rem;
     margin-top: 1rem;
     p {
@@ -213,7 +221,7 @@ body {
     }
   }
 
-  .button {
+  .search, .random {
     padding: 0.10rem;
     margin-top: 0.75rem;
     p {
@@ -248,7 +256,7 @@ body {
     }
   }
 
-  .button {
+  .search, .random {
     padding: 0.10rem;
     margin-top: 0.5rem;
     p {

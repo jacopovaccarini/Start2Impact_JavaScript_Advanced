@@ -62,8 +62,16 @@ body {
 
 .button {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.search, .random {
+  display: flex;
   justify-content: center;
-  width: 60%;
+  width: 100%;
   border: 1.5px solid black;
   border-radius: 20px;
   padding: 0.5rem;
@@ -71,12 +79,12 @@ body {
   background-color: #22b14c;
 }
 
-.button:hover {
+.search:hover, .random:hover {
   background-color: #b5e61d;
   cursor: pointer;
 }
 
-.button p {
+.search p, .random p {
   font-size: 50px;
   padding: 0;
   margin: auto;
@@ -110,7 +118,7 @@ body {
   .textbox input {
     font-size: 30px;
   }
-  .button p {
+  .search p, .random p {
     font-size: 40px;
   }
 }
@@ -126,10 +134,10 @@ body {
   .textbox input {
     font-size: 25px;
   }
-  .button {
+  .search, .random {
     margin-top: 1.5rem;
   }
-  .button p {
+  .search p, .random p {
     font-size: 35px;
   }
 }
@@ -154,11 +162,11 @@ body {
   .textbox input {
     font-size: 20px;
   }
-  .button {
+  .search, .random {
     padding: 0.25rem;
     margin-top: 1rem;
   }
-  .button p {
+  .search p, .random p {
     font-size: 30px;
   }
   .result p {
@@ -177,11 +185,11 @@ body {
     font-size: 65px;
     margin-bottom: 0.75rem;
   }
-  .button {
+  .search, .random {
     padding: 0.10rem;
     margin-top: 0.75rem;
   }
-  .button p {
+  .search p, .random p {
     font-size: 25px;
   }
   .result p {
@@ -203,11 +211,11 @@ body {
   .textbox input {
     font-size: 18px;
   }
-  .button {
+  .search, .random {
     padding: 0.10rem;
     margin-top: 0.5rem;
   }
-  .button p {
+  .search p, .random p {
     font-size: 23px;
   }
   .result p {

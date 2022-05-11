@@ -1,10 +1,40 @@
 //per nascondere la barra di scorrimento laterale
 document.body.style.overflow = "hidden";
 
+
+//creazione oggetti documento
+const div_main = document.querySelector('[main]');
+
+let div_title = document.createElement('div');
+div_title.className = "title";
+div_title.innerHTML = "<p>Life Quality</p>";
+div_main.append(div_title);
+
+let div_textbox = document.createElement('div');
+div_textbox.className = "textbox";
+div_textbox.innerHTML = '<input type="text" value="Write here the city" autofocus textbox-city>';
+div_main.append(div_textbox);
+
+let div_button = document.createElement('div');
+div_button.className = "button";
+div_main.append(div_button);
+
+let div_search = document.createElement('div');
+div_search.className = "search";
+div_search.innerHTML = "<p>SEARCH</p>";
+div_search.setAttribute("button-search","");
+div_button.append(div_search);
+
+/*let div_random = document.createElement('div');
+div_random.className = "random";
+div_random.innerHTML = "<p>RANDOM</p>";
+div_random.setAttribute("button-random","");
+div_button.append(div_random);*/
+
+
 //variabili oggetti documento
-const main = document.querySelector('[main]');
 const textbox = document.querySelector('[textbox-city]')
-const search = document.querySelector('[button-search]');
+
 
 //richiesta dei valori al server
 async function get(url, city) {
@@ -13,7 +43,7 @@ async function get(url, city) {
     let json = await response.json();
     print(json);
   } else {
-    if ( main.lastElementChild.hasAttribute("result") ) {
+    if ( div_main.lastElementChild.hasAttribute("result") ) {
       div_result = document.querySelector('[result]');
       div_result.remove();
     }
@@ -25,9 +55,10 @@ async function get(url, city) {
   }
 }
 
+
 //stampa dei valori
 async function print(text) {
-  if ( main.lastElementChild.hasAttribute("result") ) {
+  if ( div_main.lastElementChild.hasAttribute("result") ) {
     div_result.innerHTML = "";
   } else {
     div_result = document.createElement('div');
@@ -43,28 +74,33 @@ async function print(text) {
       div_result.innerHTML += `${text.summary}`
     }
   }
-  main.append(div_result);
+  div_main.append(div_result);
 }
 
+
 //click sul pulsante "search"
-search.onclick = function() {
+div_search.onclick = function() {
   if ( textbox.value == "" ) {
+    textbox.blur();
     Swal.fire({ //messaggio avviso città non inserita
       title: "You have not entered any city name",
       showCancelButton: false,
       confirmButtonColor: "#ff0000"
+    }).then((result) => {
+      textbox.focus();
     });
   } else {
     let city = textbox.value.replace(/\s+/g, '-').toLowerCase();
     get(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`, textbox.value);
+    textbox.focus();
   }
-  textbox.focus();
 }
+
 
 //click sul tasto "invio"
 textbox.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    search.click();
+    div_search.click();
   }
 });
