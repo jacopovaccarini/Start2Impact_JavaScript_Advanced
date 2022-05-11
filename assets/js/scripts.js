@@ -2,8 +2,9 @@
 document.body.style.overflow = "hidden";
 
 //variabili oggetti documento
-const search = document.querySelector('[button-search]');
 const main = document.querySelector('[main]');
+const textbox = document.querySelector('[textbox-city]')
+const search = document.querySelector('[button-search]');
 
 //richiesta dei valori al server
 async function get(url, city) {
@@ -24,7 +25,7 @@ async function get(url, city) {
   }
 }
 
-//stampa a video dei valori
+//stampa dei valori
 async function print(text) {
   if ( main.lastElementChild.hasAttribute("result") ) {
     div_result.innerHTML = "";
@@ -47,15 +48,23 @@ async function print(text) {
 
 //click sul pulsante "search"
 search.onclick = function() {
-  let textbox = document.querySelector('[textbox-city]').value;
-  if ( textbox == "" ) {
-    Swal.fire({ //messaggio avviso città non trovata
+  if ( textbox.value == "" ) {
+    Swal.fire({ //messaggio avviso città non inserita
       title: "You have not entered any city name",
       showCancelButton: false,
       confirmButtonColor: "#ff0000"
     });
   } else {
-    let city = textbox.replace(/\s+/g, '-').toLowerCase();
-    get(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`, textbox);
+    let city = textbox.value.replace(/\s+/g, '-').toLowerCase();
+    get(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`, textbox.value);
   }
+  textbox.focus();
 }
+
+//click sul tasto "invio"
+textbox.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    search.click();
+  }
+});

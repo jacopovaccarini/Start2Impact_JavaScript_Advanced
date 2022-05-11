@@ -53,8 +53,9 @@ body {
 .textbox input {
   font-size: 40px;
   text-align: center;
-  width: 60%;
-  border: none;
+  width: 100%;
+  border: 1px solid #b5e61d;
+  border-radius: 40px;
   background-color: transparent;
   color: #b5e61d;
 }
