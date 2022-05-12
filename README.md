@@ -78,12 +78,16 @@
 <!-- ESEMPI DI UTILIZZO -->
 ## Come usare il counter
 
-<p>Con il pulsante "SEARCH" si può cercare la città scritta nella textbox, mentre con il pulsante "RANDOM" si può cercare una città random tra quelle disponibili.</p>
-<p>Nel caso in cui la textbox fosse vuota uscirà un messaggio che comunica che non è stato inserita nessun nome di città nella textbox.</p>
+<p>Con il pulsante "SEARCH" si può cercare la città inserita nella textbox, mentre con il pulsante "RANDOM" si può cercare una città random tra quelle disponibili.</p>
+<p>Una volta cliccato su uno dei due pulsanti compariranno sotto i dati della qualità della vita della città scritta nella textbox<p>
+
+[![Schermata messaggio][screenshot-progetto4]](https://jacopovaccarini.github.io/Start2Impact_JavaScript_Advanced/)
+
+<p>Nel caso in cui la textbox fosse vuota, uscirà un messaggio che comunica che non è stato inserito nessun nome di città nella textbox.</p>
 
 [![Schermata messaggio][screenshot-progetto3]](https://jacopovaccarini.github.io/Start2Impact_JavaScript_Advanced/)
 
-<p>Nal caso in cui la città inserita nella textbox non è disponibile allora uscirà un messaggio che comunica che la città inserita non è stata trovata.</p>
+<p>Invece nel caso in cui la città inserita nella textbox non è disponibile allora uscirà un messaggio che comunica che la città inserita non è stata trovata.</p>
 
 [![Schermata messaggio][screenshot-progetto2]](https://jacopovaccarini.github.io/Start2Impact_JavaScript_Advanced/)
 
@@ -137,3 +141,4 @@ Collegamento al progetto: [https://github.com/jacopovaccarini/Start2Impact_JavaS
 [screenshot-progetto1]: assets/img/screenshot1.png
 [screenshot-progetto2]: assets/img/screenshot2.png
 [screenshot-progetto3]: assets/img/screenshot3.png
+[screenshot-progetto4]: assets/img/screenshot4.png
