@@ -41,11 +41,10 @@ body {
 .title p {
   font-size: 100px;
   margin: 0;
-  margin-bottom: 2rem;
 }
 
 .textbox {
-  display: flex;
+  position: relative;
   justify-content: center;
   width: 100%;
 }
@@ -60,21 +59,38 @@ body {
   color: #b5e61d;
 }
 
+.textbox .fa-magnifying-glass {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  font-size: 30px;
+  color: #b5e61d;
+}
+
+.textbox .fa-city {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  font-size: 30px;
+  color: #b5e61d;
+}
+
 .button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 65%;
 }
 
 .search, .random {
   display: flex;
   justify-content: center;
-  width: 49%;
+  width: 48%;
   border: 1.5px solid black;
   border-radius: 20px;
-  padding: 0.5rem;
   margin-top: 2rem;
   background-color: #22b14c;
 }
@@ -85,7 +101,7 @@ body {
 }
 
 .search p, .random p {
-  font-size: 50px;
+  font-size: 40px;
   padding: 0;
   margin: auto;
   text-align: center;
@@ -118,8 +134,18 @@ body {
   .textbox input {
     font-size: 30px;
   }
+  .textbox .fa-magnifying-glass {
+    font-size: 20px;
+    top: 17.5px;
+    left: 17.5px;
+  }
+  .textbox .fa-city {
+    font-size: 20px;
+    top: 17.5px;
+    right: 17.5px;
+  }
   .search p, .random p {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -129,107 +155,86 @@ body {
   }
   .title p {
     font-size: 80px;
-    margin-bottom: 1.5rem;
   }
   .textbox input {
     font-size: 25px;
+  }
+  .textbox .fa-magnifying-glass {
+    font-size: 15px;
+    top: 15px;
+    left: 15px;
+  }
+  .textbox .fa-city {
+    font-size: 15px;
+    top: 15px;
+    right: 15px;
   }
   .search, .random {
     margin-top: 1.5rem;
   }
   .search p, .random p {
-    font-size: 35px;
+    font-size: 25px;
   }
 }
 
-@media (max-width: 905px) {
+@media (max-width: 650px) {
   body {
     width: 80%;
   }
-}
-
-@media (max-width: 590px) {
-  .result p {
-    font-size: 95%;
-  }
-}
-
-@media (max-width: 565px) {
   .title p {
     font-size: 70px;
-    margin-bottom: 1rem;
   }
   .textbox input {
     font-size: 20px;
   }
+  .textbox .fa-magnifying-glass {
+    font-size: 10px;
+    top: 13px;
+    left: 13px;
+  }
+  .textbox .fa-city {
+    font-size: 10px;
+    top: 13px;
+    right: 13px;
+  }
   .search, .random {
-    padding: 0.25rem;
     margin-top: 1rem;
   }
   .search p, .random p {
-    font-size: 30px;
+    font-size: 20px;
   }
   .result p {
     font-size: 90%;
   }
 }
 
-@media (max-width: 540px) {
-  .result p {
-    font-size: 85%;
-  }
-}
-
 @media (max-width: 500px) {
-  .title p {
-    font-size: 65px;
-    margin-bottom: 0.75rem;
+  body {
+    width: 90%;
   }
-  .search, .random {
-    padding: 0.10rem;
-    margin-top: 0.75rem;
+  .title p {
+    font-size: 60px;
+  }
+  .textbox input {
+    font-size: 18px;
+  }
+  .textbox .fa-magnifying-glass {
+    top: 11px;
+    left: 11px;
+  }
+  .textbox .fa-city {
+    top: 11px;
+    right: 11px;
   }
   .search p, .random p {
-    font-size: 25px;
+    font-size: 18px;
   }
   .result p {
     font-size: 80%;
   }
 }
 
-@media (max-width: 475px) {
-  body {
-    width: 90%;
-  }
-}
-
-@media (max-width: 425px) {
-  .title p {
-    font-size: 60px;
-    margin-bottom: 0.5rem;
-  }
-  .textbox input {
-    font-size: 18px;
-  }
-  .search, .random {
-    padding: 0.10rem;
-    margin-top: 0.5rem;
-  }
-  .search p, .random p {
-    font-size: 23px;
-  }
-  .result p {
-    font-size: 75%;
-  }
-}
-
-@media (max-width: 400px) {
-  body {
-    width: 95%;
-  }
-}
-
-@media (max-width: 380px) {
+@media (max-width: 390px) {
   body {
     width: 100%;
   }

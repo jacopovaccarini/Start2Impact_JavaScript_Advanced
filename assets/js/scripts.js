@@ -12,7 +12,7 @@ div_main.append(div_title);
 
 let div_textbox = document.createElement('div');
 div_textbox.className = "textbox";
-div_textbox.innerHTML = '<input type="text" value="Write here the city" autofocus textbox-city>';
+div_textbox.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i><input type="text" value="Write here the city" autofocus textbox-city><i class="fa-solid fa-city"></i>';
 div_main.append(div_textbox);
 
 let div_button = document.createElement('div');
