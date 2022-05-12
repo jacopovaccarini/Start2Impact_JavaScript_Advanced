@@ -110,7 +110,8 @@ async function search() {
       textbox.focus();
     });
   } else {
-    let city = textbox.value.replace(/\s+/g, '-').replace(',', '').replace('.', '').toLowerCase();
+    let city = textbox.value.replace(',', '').replace('.', '').replace('.', '').replace(/\s+/g, '-').toLowerCase();
+    console.log(city);
     get(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`, textbox.value);
     textbox.focus();
   }

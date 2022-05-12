@@ -115,13 +115,16 @@ body {
   border-radius: 20px;
   padding: 0.5rem;
   margin-top: 2rem;
-  background-color: rgba(181, 230, 29, 0.5);
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
 }
 
 .result p {
+  color: white;
+  font-size: 20px;
+  text-align: center;
   padding: 0;
   margin: 0;
-  justify-self: center;
 }
 
 @media (max-width: 1280px) {
@@ -177,6 +180,9 @@ body {
   }
   .result {
     width: 140%;
+  }
+  .result p {
+    font-size: 95%;
   }
 }
 
