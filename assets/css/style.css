@@ -110,8 +110,7 @@ body {
 .result {
   display: grid;
   grid-template-columns: 50% 50%;
-  justify-content: center;
-  width: 100%;
+  width: 160%;
   border: 1.5px solid #22b14c;
   border-radius: 20px;
   padding: 0.5rem;
@@ -122,6 +121,7 @@ body {
 .result p {
   padding: 0;
   margin: 0;
+  justify-self: center;
 }
 
 @media (max-width: 1280px) {
@@ -175,6 +175,9 @@ body {
   .search p, .random p {
     font-size: 25px;
   }
+  .result {
+    width: 140%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -203,6 +206,9 @@ body {
   .search p, .random p {
     font-size: 20px;
   }
+  .result {
+    width: 120%;
+  }
   .result p {
     font-size: 90%;
   }
@@ -229,13 +235,19 @@ body {
   .search p, .random p {
     font-size: 18px;
   }
+  .result {
+    width: 100%;
+  }
   .result p {
     font-size: 80%;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 410px) {
   body {
     width: 100%;
+  }
+  .result {
+    width: 90%;
   }
 }

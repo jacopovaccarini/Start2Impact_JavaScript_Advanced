@@ -93,7 +93,7 @@ body {
 .search, .random {
   display: flex;
   justify-content: center;
-  width: 48%; //49% quando c'è anche l'altro button
+  width: 48%;
   border: 1.5px solid black;
   border-radius: 20px;
   margin-top: 2rem;
@@ -115,8 +115,7 @@ body {
 .result {
   display: grid;
   grid-template-columns: 50% 50%;
-  justify-content: center;
-  width: 100%;
+  width: 160%;
   border: 1.5px solid $primary;
   border-radius: 20px;
   padding: 0.5rem;
@@ -126,6 +125,7 @@ body {
   p {
     padding: 0;
     margin: 0;
+    justify-self: center;
   }
 }
 
@@ -199,6 +199,10 @@ body {
       font-size: 25px;
     }
   }
+
+  .result {
+    width: 140%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -238,6 +242,7 @@ body {
   }
 
   .result {
+    width: 120%;
     p {
       font-size: 90%;
     }
@@ -278,14 +283,19 @@ body {
   }
 
   .result {
+    width: 100%;
     p {
       font-size: 80%;
     }
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 410px) {
   body {
     width: 100%;
+  }
+
+  .result {
+    width: 90%;
   }
 }
