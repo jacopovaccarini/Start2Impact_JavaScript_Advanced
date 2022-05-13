@@ -111,7 +111,9 @@ async function search() {
     });
   } else {
     let city = textbox.value.replace(',', '').replace('.', '').replace('.', '').replace(/\s+/g, '-').toLowerCase();
-    console.log(city);
+    if (city == "galway") {
+      city = "gaillimh";
+    }
     get(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`, textbox.value);
     textbox.focus();
   }
