@@ -44,7 +44,7 @@
         <li><a href="#sviluppato-con">Sviluppato con</a></li>
       </ul>
     </li>
-    <li><a href="#come-usare-la-app">Come usare l'applicazione</a></li>
+    <li><a href="#come-usare-l-applicazione">Come usare l'applicazione</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contatti">Contatti</a></li>
     <li><a href="#ringraziamenti">Ringraziamenti</a></li>
@@ -76,7 +76,7 @@
 
 
 <!-- ESEMPI DI UTILIZZO -->
-## Come usare la app
+## Come usare l'applicazione
 
 <p>Con il pulsante "SEARCH" si può cercare la città inserita nella textbox, mentre con il pulsante "RANDOM" si può cercare una città random tra quelle disponibili.</p>
 <p>Una volta cliccato su uno dei due pulsanti compariranno sotto i dati della qualità della vita della città scritta nella textbox<p>
