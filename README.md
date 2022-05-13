@@ -44,7 +44,7 @@
         <li><a href="#sviluppato-con">Sviluppato con</a></li>
       </ul>
     </li>
-    <li><a href="#come-usare-l-applicazione">Come usare l'applicazione</a></li>
+    <li><a href="#come-usare-lapplicazione">Come usare l'applicazione</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contatti">Contatti</a></li>
     <li><a href="#ringraziamenti">Ringraziamenti</a></li>
