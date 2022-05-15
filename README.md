@@ -58,7 +58,7 @@
 
 [![Schermata applicazione][screenshot-progetto1]](https://jacopovaccarini.github.io/Start2Impact_JavaScript_Advanced/)
 
-<p>Questo progetto consiste in un'applicazione web che visualizza i dati sulla qualità della vità della città ricercata. L'applicazione è costituita da una textbox e due pulsanti, uno per cercare la città inserita nella textbox e un'altro per cercare una città random tra quelle disponibili.</p>
+<p>Questo progetto consiste in un'applicazione web che visualizza i dati sulla qualità della vità della città ricercata. L'applicazione è costituita da una textbox e due pulsanti, uno per cercare la città inserita nella textbox e un altro per cercare una città random tra quelle disponibili.</p>
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
