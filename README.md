@@ -79,7 +79,7 @@
 ## Come usare l'applicazione
 
 <p>Con il pulsante "SEARCH" si può cercare la città inserita nella textbox, mentre con il pulsante "RANDOM" si può cercare una città random tra quelle disponibili.</p>
-<p>Una volta cliccato su uno dei due pulsanti compariranno sotto i dati della qualità della vita della città scritta nella textbox<p>
+<p>Una volta cliccato su uno dei due pulsanti compariranno sotto i dati della qualità della vita della città visualizzata nella textbox.<p>
 
 [![Schermata messaggio][screenshot-progetto4]](https://jacopovaccarini.github.io/Start2Impact_JavaScript_Advanced/)
 
@@ -87,7 +87,7 @@
 
 [![Schermata messaggio][screenshot-progetto3]](https://jacopovaccarini.github.io/Start2Impact_JavaScript_Advanced/)
 
-<p>Invece nel caso in cui la città inserita nella textbox non è disponibile allora uscirà un messaggio che comunica che la città inserita non è stata trovata.</p>
+<p>Invece nel caso in cui la città inserita nella textbox non fosse disponibile allora uscirà un messaggio che comunica che la città inserita non è stata trovata.</p>
 
 [![Schermata messaggio][screenshot-progetto2]](https://jacopovaccarini.github.io/Start2Impact_JavaScript_Advanced/)
 
