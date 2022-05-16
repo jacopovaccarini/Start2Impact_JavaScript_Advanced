@@ -70,6 +70,9 @@
 * [Sass](https://sass-lang.com/)
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript?retiredLocale=it)
 * [sweetalert2](https://sweetalert2.github.io/)
+* [webpack](https://webpack.js.org/)
+* [dotenv-webpack](https://www.npmjs.com/package/dotenv-webpack)
+* [Axios](https://www.npmjs.com/package/axios)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
