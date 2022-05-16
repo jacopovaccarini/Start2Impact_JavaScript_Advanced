@@ -1,7 +1,6 @@
 //per nascondere la barra di scorrimento laterale
 document.body.style.overflow = "hidden";
 
-
 //creazione oggetti documento
 const div_main = document.querySelector('[main]');
 
@@ -32,7 +31,7 @@ div_random.setAttribute("button-random","");
 div_button.append(div_random);
 
 
-//variabile oggetto documento
+//variabile oggetto textbox documento
 const textbox = document.querySelector('[textbox-city]');
 
 //variabile oggetto elenco città
@@ -41,40 +40,40 @@ let city_list = [];
 
 //richiesta dell'elenco città al server
 window.onload = async function() {
-  const response = await fetch("https://api.teleport.org/api/urban_areas/")
-  if (response.ok) {
-    let json = await response.json();
-    for (i = 0; i < json.count; i++) {
-      city_list[i] = json["_links"]["ua:item"][i]["name"];
-    }
-  } else {
-    Swal.fire({ //messaggio avviso elenco città non trovato
-      title: `The city list was not found`,
-      showCancelButton: false,
-      confirmButtonColor: "#ff0000"
+  await axios.get(process.env.URBAN_AREAS)
+    .then(response => {
+      for (i = 0; i < response.data.count; i++) { //costruzione dell'array con l'elenco delle città disponibili
+        city_list[i] = response["data"]["_links"]["ua:item"][i]["name"];
+      }
+    })
+    .catch(error => {
+      Swal.fire({ //messaggio avviso elenco città non trovato
+        title: `The city list was not found`,
+        showCancelButton: false,
+        confirmButtonColor: "#ff0000"
+      });
     });
-  };
 };
 
 
 //richiesta dei valori al server
 async function get(url, city) {
-  const response = await fetch(url);
-  if (response.ok) {
-    let json = await response.json();
-    print(json);
-  } else {
-    if ( div_main.lastElementChild.hasAttribute("result") ) {
-      div_result = document.querySelector('[result]');
-      div_result.remove();
-    }
-    Swal.fire({ //messaggio avviso città non trovata
-      title: `The city "${city}" was not found`,
-      showCancelButton: false,
-      confirmButtonColor: "#ff0000"
-    });
-  }
-}
+  await axios.get(url)
+    .then(response => {
+      print(response.data);
+    })
+    .catch(error => {
+      if ( div_main.lastElementChild.hasAttribute("result") ) {
+        div_result = document.querySelector('[result]');
+        div_result.remove();
+      }
+      Swal.fire({ //messaggio avviso città non trovata
+        title: `The city "${city}" was not found`,
+        showCancelButton: false,
+        confirmButtonColor: "#ff0000"
+      });
+    })
+};
 
 
 //stampa dei valori
@@ -111,11 +110,11 @@ async function search() {
       textbox.focus();
     });
   } else {
-    let city = textbox.value.replace(',', '').replace('.', '').replace('.', '').replace(/\s+/g, '-').toLowerCase();
-    if (city == "galway") {
+    let city = textbox.value.replace(',', '').replace('.', '').replace('.', '').replace(/\s+/g, '-').toLowerCase(); //sostituzione di alcuni caratteri non letti dal server
+    if (city == "galway") { //città nel server listata con un altro nome
       city = "gaillimh";
     }
-    get(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`, textbox.value);
+    get(process.env.URBAN_AREAS + `slug:${city}/scores/`, textbox.value);
     textbox.focus();
   }
 }

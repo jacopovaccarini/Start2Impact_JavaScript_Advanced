@@ -124,6 +124,9 @@ Collegamento al progetto: [https://github.com/jacopovaccarini/Start2Impact_JavaS
 
 * [sweetalert2](https://sweetalert2.github.io/)
 * [Font Awesome](https://fontawesome.com/)
+* [webpack](https://webpack.js.org/)
+* [dotenv-webpack](https://www.npmjs.com/package/dotenv-webpack)
+* [Axios](https://www.npmjs.com/package/axios)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
