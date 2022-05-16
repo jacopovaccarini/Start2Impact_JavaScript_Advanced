@@ -35,9 +35,9 @@ div_button.append(div_random);
 //variabile oggetto documento
 const textbox = document.querySelector('[textbox-city]');
 
-
 //variabile oggetto elenco città
 let city_list = [];
+
 
 //richiesta dell'elenco città al server
 window.onload = async function() {
@@ -55,6 +55,7 @@ window.onload = async function() {
     });
   };
 };
+
 
 //richiesta dei valori al server
 async function get(url, city) {

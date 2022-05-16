@@ -1,2 +1,3 @@
-# ignora cartella webpack
-webpack
+node_modules
+package.json
+package-lock.json
