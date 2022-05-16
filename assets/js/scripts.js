@@ -1,6 +1,7 @@
 //per nascondere la barra di scorrimento laterale
 document.body.style.overflow = "hidden";
 
+
 //creazione oggetti documento
 const div_main = document.querySelector('[main]');
 
