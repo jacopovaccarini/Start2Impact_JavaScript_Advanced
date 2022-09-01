@@ -19,7 +19,7 @@
 <h2 align="center">Life Quality</h2>
 
   <p align="center">
-    Applicazione web che visualizza i dati sulla qualità della vità delle principali città
+    Applicazione web che visualizza i dati sulla qualità della vita delle principali città
     <br />
     <a href="https://github.com/jacopovaccarini/Start2Impact_JavaScript_Advanced"><strong>Esplora i documenti »</strong></a>
     <br />
